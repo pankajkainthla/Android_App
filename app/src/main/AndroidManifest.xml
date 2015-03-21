@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="travis.thenewboston.com.thenewboston">
 
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
 
         <activity
             android:name="travis.thenewboston.com.thenewboston.splash"
@@ -38,6 +41,82 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.TextPlay"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.TextPlay" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.Email"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.Email" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.Camera"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.Camera" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.Data"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.Data" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.OpenedClass"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.OpenedClass" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.AboutUs"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.AboutUs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="travis.thenewboston.com.thenewboston.Prefs"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="travis.thenewboston.com.thenewboston.Prefs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
