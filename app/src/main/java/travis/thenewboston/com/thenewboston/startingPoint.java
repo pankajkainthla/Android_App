@@ -4,36 +4,53 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class startingPoint extends Activity {
 
+
+    int counter;
+
+    Button add, sub;
+    TextView display;
+
+    public void updateDisplay() {
+        this.display.setText("Your total is: " + this.counter);
+    }
+
+
+    /**
+     * Called when the activity is first created.
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_starting_point);
-    }
+        setContentView(R.layout.main);
 
+        // Custom
+        counter = 0;
+        add = (Button) findViewById(R.id.bAdd);
+        sub = (Button) findViewById(R.id.bSub);
+        display = (TextView) findViewById(R.id.tvDisplay);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_starting_point, menu);
-        return true;
-    }
+        add.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+            public void onClick(View v) {
+                counter++;
+                display.setText("Your total is: " + counter);
+            }
+        });
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        sub.setOnClickListener(new View.OnClickListener() {
 
-        return super.onOptionsItemSelected(item);
+            public void onClick(View v) {
+                counter--;
+                display.setText("Your total is: " + counter);
+            }
+        });
+
     }
 }

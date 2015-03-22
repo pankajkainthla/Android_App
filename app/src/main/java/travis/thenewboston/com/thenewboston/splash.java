@@ -17,6 +17,7 @@ public class splash extends Activity {
         setContentView(R.layout.splash);
 
         ourSong = MediaPlayer.create(splash.this, R.raw.sadma);
+        ourSong.setVolume(0, 0);
         ourSong.start();
 
 
